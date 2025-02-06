@@ -1,12 +1,13 @@
 import { assets } from "@/assets/assets";
+import { Facebook, Github, Linkedin } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 
 const Hero = () => {
   return (
     <div className="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4">
-      <div>
-        <Image src={assets.profile_img} alt="" className="rounded-3xl w-40" />
+      <div className="mt-10">
+        <Image src={assets.profile_img} alt="" className="rounded-full w-[160px] h-[160px]" />
       </div>
       <h3 className="flex items-end gap-2 text-xl md:text-2xl mb-3 font-Ovo">
         Hi! I'm Nure Alam{" "}
@@ -33,9 +34,32 @@ const Hero = () => {
           download
           className="px-10 py-3 border border-gray-500 rounded-full flex items-center gap-2"
         >
-          My resume{" "}
-          <Image src={assets.download_icon} alt="" className="w-4" />
+          My resume <Image src={assets.download_icon} alt="" className="w-4" />
         </a>
+      </div>
+      <div className="flex gap-4">
+      <Facebook
+        onClick={() =>
+          window.open(
+            "https://www.facebook.com/profile.php?id=100019022316999",
+            "_blank"
+          )
+        }
+        className="hover:text-blue-400 text-xl cursor-pointer"
+      />
+      <Github
+        onClick={() => window.open("https://github.com/NureAlam68", "_blank")}
+        className="hover:text-blue-400 text-xl cursor-pointer"
+      />
+      <Linkedin
+        onClick={() =>
+          window.open(
+            "https://www.linkedin.com/in/md-nure-alam-444887266/",
+            "_blank"
+          )
+        }
+        className="hover:text-blue-400 text-xl cursor-pointer"
+      />
       </div>
     </div>
   );
