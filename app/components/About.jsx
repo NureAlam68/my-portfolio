@@ -21,7 +21,7 @@ const About = () => {
             strong passion for web development. Alongside my studies, I've
             developed skills in HTML, CSS, JavaScript, Tailwind CSS, React.js,
             Firebase, Express.js, Next.js, Bootstrap and MongoBD . I'm also
-            continuously learning and honing my coding abilities.
+            continuously learning and honing my coding abilities. I enjoy playing and watching cricket and football.
           </p>
           <ul className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl">
             {infoList.map(({ icon, iconDark, title, description }, idx) => (
