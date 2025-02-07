@@ -85,10 +85,10 @@ export default function Projects() {
   const [selectedProject, setSelectedProject] = useState(null);
 
   return (
-    <section id="projects" className="min-h-screen bg-gradient-to-b from-gray-50 to-white py-20 scroll-mt-20">
+    <section id="projects" className="min-h-screen py-20 scroll-mt-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4 font-Ovo">Featured Projects</h2>
+          <h2 className="text-4xl font-bold mb-4 font-Ovo">Featured Projects</h2>
           <div className="w-20 h-1 bg-blue-500 mx-auto rounded-full"></div>
         </div>
 
@@ -99,7 +99,7 @@ export default function Projects() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+              className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 dark:border-[0.5px]"
             >
               <div className="relative h-64 overflow-hidden">
                 <Image
@@ -112,14 +112,14 @@ export default function Projects() {
               </div>
               
               <div className="p-6">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">{project.name}</h3>
-                <p className="text-gray-600 mb-4 line-clamp-2">{project.description}</p>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2 dark:text-white">{project.name}</h3>
+                <p className="text-gray-600 mb-4 line-clamp-2 dark:text-white/80">{project.description}</p>
                 
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag, i) => (
                     <span
                       key={i}
-                      className="px-3 py-1 text-sm font-medium bg-blue-50 text-blue-600 rounded-full"
+                      className="px-3 py-1 text-sm font-medium bg-blue-50 text-blue-600 rounded-full dark:bg-darkHover/70"
                     >
                       {tag}
                     </span>
@@ -128,7 +128,7 @@ export default function Projects() {
 
                 <button
                   onClick={() => setSelectedProject(project)}
-                  className="w-full px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors duration-200"
+                  className="w-full px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors duration-200 dark:bg-darkHover"
                 >
                   View Details
                 </button>
@@ -157,7 +157,7 @@ export default function Projects() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 20 }}
-                className="relative bg-white rounded-2xl shadow-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto"
+                className="relative bg-white rounded-2xl shadow-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto dark:bg-darkTheme"
               >
                 <div className="flex items-center gap-2">
                   <button
@@ -184,18 +184,18 @@ export default function Projects() {
                 </div>
 
                 <div className="p-8">
-                  <p className="text-gray-600 text-lg mb-6">
+                  <p className="text-gray-600 dark:text-white/80 text-lg mb-6">
                     {selectedProject.description}
                   </p>
 
                   <div className="space-y-6">
                     <div>
-                      <h3 className="text-lg font-semibold text-gray-900 mb-2">Technologies</h3>
+                      <h3 className="text-lg font-semibold text-gray-900 mb-2 dark:text-white">Technologies</h3>
                       <div className="flex flex-wrap gap-2">
                         {selectedProject.tags.map((tag, i) => (
                           <span
                             key={i}
-                            className="px-3 py-1 text-sm font-medium bg-blue-50 text-blue-600 rounded-full"
+                            className="px-3 py-1 text-sm font-medium bg-blue-50 text-blue-600 rounded-full dark:bg-darkHover"
                           >
                             {tag}
                           </span>
@@ -204,13 +204,13 @@ export default function Projects() {
                     </div>
 
                     <div>
-                      <h3 className="text-lg font-semibold text-gray-900 mb-2">Challenges Overcome</h3>
-                      <p className="text-gray-600">{selectedProject.challenges}</p>
+                      <h3 className="text-lg font-semibold text-gray-900 mb-2 dark:text-white">Challenges Overcome</h3>
+                      <p className="text-gray-600 dark:text-white/80">{selectedProject.challenges}</p>
                     </div>
 
                     <div>
-                      <h3 className="text-lg font-semibold text-gray-900 mb-2">Future Improvements</h3>
-                      <p className="text-gray-600">{selectedProject.improvements}</p>
+                      <h3 className="text-lg font-semibold text-gray-900 mb-2 dark:text-white">Future Improvements</h3>
+                      <p className="text-gray-600 dark:text-white/80">{selectedProject.improvements}</p>
                     </div>
 
                     <div className="flex gap-4 pt-4">
@@ -225,7 +225,7 @@ export default function Projects() {
                       <Link
                         href={selectedProject.source_code_link}
                         target="_blank"
-                        className="flex items-center gap-2 px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors"
+                        className="flex items-center gap-2 px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors dark:bg-darkHover"
                       >
                         <Github className="w-5 h-5" />
                         View Code

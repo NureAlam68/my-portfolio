@@ -25,7 +25,7 @@ const skillCategories = [
       { name: "CSS3", imageUrl: css },
       { name: "JavaScript", imageUrl: javaScript },
       { name: "React", imageUrl: react },
-      { name: "Tailwind CSS", imageUrl: tailwind },
+      { name: "Tailwind", imageUrl: tailwind },
       { name: "Next Js", imageUrl: next },
     ]
   },
@@ -64,7 +64,7 @@ const Skills = () => {
           {skillCategories.map((category, index) => (
             <div
               key={category.title}
-              className="bg-white backdrop-blur-sm rounded-xl p-6 hover:transform hover:scale-105 transition-all duration-300 hover:shadow-black border"
+              className="backdrop-blur-sm rounded-xl p-6 hover:transform hover:scale-105 transition-all duration-300 hover:shadow-black border dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50"
               style={{ animation: `fadeIn 0.5s ease-out ${index * 0.2}s backwards` }}
             >
               <div className="flex items-center gap-3 mb-6">
