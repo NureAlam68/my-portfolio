@@ -54,12 +54,7 @@ const Navbar = () => {
           </li>
           <li>
             <a className="font-Ovo" href="#skill">
-              Skill
-            </a>
-          </li>
-          <li>
-            <a className="font-Ovo" href="#services">
-              Services
+              Skills
             </a>
           </li>
           <li>
@@ -109,12 +104,7 @@ const Navbar = () => {
           </li>
           <li>
             <a className="font-Ovo" onClick={closeMenu} href="#skill">
-              Skill
-            </a>
-          </li>
-          <li>
-            <a className="font-Ovo" onClick={closeMenu} href="#services">
-              Services
+              Skills
             </a>
           </li>
           <li>
