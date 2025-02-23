@@ -3,84 +3,103 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
+// import { motion, AnimatePresence } from "framer-motion";
 import { Github, ExternalLink, X } from "lucide-react";
-import projectE from "../../assets/projectE.png"
-import projectL from "../../assets/luxeway.png"
-import projectG from "../../assets/globepass.png"
-import projectT from "../../assets/techHive.png"
-import projectM from "../../assets/meals.png"
-import projectJ from "../../assets/job.png"
+import projectE from "../../assets/projectE.png";
+import projectL from "../../assets/luxeway.png";
+import projectG from "../../assets/globepass.png";
+import projectT from "../../assets/techHive.png";
+import projectM from "../../assets/meals.png";
+import projectJ from "../../assets/job.png";
+import { AnimatePresence, motion } from "motion/react";
 
 const projects = [
-    {
-      id: 0,
-      name: "TechHive",
-      description: "TechHive is a platform where users can discover and share the latest tech products like Web Apps, AI tools, Software, Games, and Mobile Apps.",
-      tags: ["Tailwind", "React", "MongoDB", "Express", "Jwt"],
-      image: projectT,
-      source_code_link: "https://github.com/NureAlam68/tech-hive-client",
-      live_link: "https://tech-hive-5e087.web.app/",
-      challenges: "Handling a large number of concurrent user interactions and ensuring data consistency.",
-      improvements: "Enhancing search and filtering options for a better user experience.",
-    },
-    {
-      id: 1,
-      name: "LuxeWay",
-      description: "LuxeWay is a sleek and modern hotel booking platform designed to provide users with a seamless experience for booking rooms.",
-      tags: ["Tailwind", "React", "MongoDB", "Express"],
-      image: projectL,
-      source_code_link: "https://github.com/NureAlam68/luxe-way-client",
-      live_link: "https://luxe-way-2a039.web.app/",
-      challenges: "Optimizing the booking engine to prevent double bookings in real-time.",
-      improvements: "Integrating AI-based pricing suggestions based on demand and seasonality.",
-    },
-    {
-      id: 2,
-      name: "GlobePass",
-      description: "GlobePass is a full-stack web application designed to streamline the visa application process.",
-      tags: ["Tailwind", "React", "MongoDB", "Express"],
-      image: projectG,
-      source_code_link: "https://github.com/NureAlam68/globe-pass-client",
-      live_link: "https://globe-pass.web.app/",
-      challenges: "Ensuring compliance with various country-specific visa regulations and document formats.",
-      improvements: "Adding multilingual support to cater to a wider audience globally.",
-    },
-    {
-      id: 3,
-      name: "Magical Meals",
-      description: "Magical Meals is a modern food delivery and recipe-sharing platform that offers a seamless experience for discovering delicious meals and ordering food online.",
-      tags: ["Tailwind", "React", "MongoDB", "Express"],
-      image: projectM,
-      source_code_link: "https://github.com/NureAlam68/magical-meals-client",
-      live_link: "https://magical-meals.web.app/",
-      challenges: "Balancing real-time order tracking with restaurant availability updates.",
-      improvements: "Implementing a dynamic recommendation system for personalized meal suggestions.",
-    },
-    {
-      id: 4,
-      name: "JobNest",
-      description: "A smart job posting platform that connects employers with the right candidates by aggregating job listings from various sources. Simplify hiring and job searching with ease.",
-      tags: ["Tailwind", "React", "MongoDB", "Express"],
-      image: projectJ,
-      source_code_link: "https://github.com/NureAlam68/job-nest-client",
-      live_link: "https://jobnest-1fa99.web.app/",
-      challenges: "Preventing spam job postings and ensuring the credibility of job listings.",
-      improvements: "Integrating AI-powered resume screening for better job recommendations.",
-    },
-    {
-      id: 5,
-      name: "Espresso Emporium",
-      description: "A modern web application to explore, order, and enjoy coffee! Built with a sleek and responsive design.",
-      tags: ["Tailwind", "React", "MongoDB", "Express"],
-      image: projectE,
-      source_code_link: "https://github.com/NureAlam68/espresso-emporium",
-      live_link: "https://coffee-store-6e1bf.web.app/",
-      challenges: "Managing order surge during peak hours without affecting performance.",
-      improvements: "Implementing a loyalty rewards program to enhance customer retention.",
-    },
-  ];
-  
+  {
+    id: 0,
+    name: "TechHive",
+    description:
+      "TechHive is a platform where users can discover and share the latest tech products like Web Apps, AI tools, Software, Games, and Mobile Apps.",
+    tags: ["Tailwind", "React", "MongoDB", "Express", "Jwt"],
+    image: projectT,
+    source_code_link: "https://github.com/NureAlam68/tech-hive-client",
+    live_link: "https://tech-hive-5e087.web.app/",
+    challenges:
+      "Handling a large number of concurrent user interactions and ensuring data consistency.",
+    improvements:
+      "Enhancing search and filtering options for a better user experience.",
+  },
+  {
+    id: 1,
+    name: "LuxeWay",
+    description:
+      "LuxeWay is a sleek and modern hotel booking platform designed to provide users with a seamless experience for booking rooms.",
+    tags: ["Tailwind", "React", "MongoDB", "Express"],
+    image: projectL,
+    source_code_link: "https://github.com/NureAlam68/luxe-way-client",
+    live_link: "https://luxe-way-2a039.web.app/",
+    challenges:
+      "Optimizing the booking engine to prevent double bookings in real-time.",
+    improvements:
+      "Integrating AI-based pricing suggestions based on demand and seasonality.",
+  },
+  {
+    id: 2,
+    name: "GlobePass",
+    description:
+      "GlobePass is a full-stack web application designed to streamline the visa application process.",
+    tags: ["Tailwind", "React", "MongoDB", "Express"],
+    image: projectG,
+    source_code_link: "https://github.com/NureAlam68/globe-pass-client",
+    live_link: "https://globe-pass.web.app/",
+    challenges:
+      "Ensuring compliance with various country-specific visa regulations and document formats.",
+    improvements:
+      "Adding multilingual support to cater to a wider audience globally.",
+  },
+  {
+    id: 3,
+    name: "Magical Meals",
+    description:
+      "Magical Meals is a modern food delivery and recipe-sharing platform that offers a seamless experience for discovering delicious meals and ordering food online.",
+    tags: ["Tailwind", "React", "MongoDB", "Express"],
+    image: projectM,
+    source_code_link: "https://github.com/NureAlam68/magical-meals-client",
+    live_link: "https://magical-meals.web.app/",
+    challenges:
+      "Balancing real-time order tracking with restaurant availability updates.",
+    improvements:
+      "Implementing a dynamic recommendation system for personalized meal suggestions.",
+  },
+  {
+    id: 4,
+    name: "JobNest",
+    description:
+      "A smart job posting platform that connects employers with the right candidates by aggregating job listings from various sources. Simplify hiring and job searching with ease.",
+    tags: ["Tailwind", "React", "MongoDB", "Express"],
+    image: projectJ,
+    source_code_link: "https://github.com/NureAlam68/job-nest-client",
+    live_link: "https://jobnest-1fa99.web.app/",
+    challenges:
+      "Preventing spam job postings and ensuring the credibility of job listings.",
+    improvements:
+      "Integrating AI-powered resume screening for better job recommendations.",
+  },
+  {
+    id: 5,
+    name: "Espresso Emporium",
+    description:
+      "A modern web application to explore, order, and enjoy coffee! Built with a sleek and responsive design.",
+    tags: ["Tailwind", "React", "MongoDB", "Express"],
+    image: projectE,
+    source_code_link: "https://github.com/NureAlam68/espresso-emporium",
+    live_link: "https://coffee-store-6e1bf.web.app/",
+    challenges:
+      "Managing order surge during peak hours without affecting performance.",
+    improvements:
+      "Implementing a loyalty rewards program to enhance customer retention.",
+  },
+];
+
 export default function Projects() {
   const [selectedProject, setSelectedProject] = useState(null);
 
@@ -88,18 +107,35 @@ export default function Projects() {
     <section id="projects" className="min-h-screen py-20 scroll-mt-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4 font-Ovo">Featured Projects</h2>
-          <div className="w-20 h-1 bg-blue-500 mx-auto rounded-full"></div>
+          <motion.h2
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="text-4xl font-bold mb-4 font-Ovo"
+          >
+            Featured Projects
+          </motion.h2>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="w-20 h-1 bg-blue-500 mx-auto rounded-full"
+          ></motion.div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.9 }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
           {projects.map((project, index) => (
             <motion.div
               key={project.id}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 dark:border-[0.5px]"
+              className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 dark:border dark:border-gray-700"
             >
               <div className="relative h-64 overflow-hidden">
                 <Image
@@ -110,11 +146,15 @@ export default function Projects() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
-              
+
               <div className="p-6">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2 dark:text-white">{project.name}</h3>
-                <p className="text-gray-600 mb-4 line-clamp-2 dark:text-white/80">{project.description}</p>
-                
+                <h3 className="text-2xl font-bold text-gray-900 mb-2 dark:text-white">
+                  {project.name}
+                </h3>
+                <p className="text-gray-600 mb-4 line-clamp-2 dark:text-white/80">
+                  {project.description}
+                </p>
+
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag, i) => (
                     <span
@@ -128,14 +168,14 @@ export default function Projects() {
 
                 <button
                   onClick={() => setSelectedProject(project)}
-                  className="w-full px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors duration-200 dark:bg-darkHover"
+                  className="w-full px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-purple-900 transition-colors duration-200 dark:bg-darkHover"
                 >
                   View Details
                 </button>
               </div>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         <AnimatePresence>
           {selectedProject && (
@@ -152,7 +192,7 @@ export default function Projects() {
                 className="fixed inset-0 bg-black/40 backdrop-blur-sm"
                 onClick={() => setSelectedProject(null)}
               />
-              
+
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -190,7 +230,9 @@ export default function Projects() {
 
                   <div className="space-y-6">
                     <div>
-                      <h3 className="text-lg font-semibold text-gray-900 mb-2 dark:text-white">Technologies</h3>
+                      <h3 className="text-lg font-semibold text-gray-900 mb-2 dark:text-white">
+                        Technologies
+                      </h3>
                       <div className="flex flex-wrap gap-2">
                         {selectedProject.tags.map((tag, i) => (
                           <span
@@ -204,13 +246,21 @@ export default function Projects() {
                     </div>
 
                     <div>
-                      <h3 className="text-lg font-semibold text-gray-900 mb-2 dark:text-white">Challenges Overcome</h3>
-                      <p className="text-gray-600 dark:text-white/80">{selectedProject.challenges}</p>
+                      <h3 className="text-lg font-semibold text-gray-900 mb-2 dark:text-white">
+                        Challenges Overcome
+                      </h3>
+                      <p className="text-gray-600 dark:text-white/80">
+                        {selectedProject.challenges}
+                      </p>
                     </div>
 
                     <div>
-                      <h3 className="text-lg font-semibold text-gray-900 mb-2 dark:text-white">Future Improvements</h3>
-                      <p className="text-gray-600 dark:text-white/80">{selectedProject.improvements}</p>
+                      <h3 className="text-lg font-semibold text-gray-900 mb-2 dark:text-white">
+                        Future Improvements
+                      </h3>
+                      <p className="text-gray-600 dark:text-white/80">
+                        {selectedProject.improvements}
+                      </p>
                     </div>
 
                     <div className="flex gap-4 pt-4">
@@ -225,7 +275,7 @@ export default function Projects() {
                       <Link
                         href={selectedProject.source_code_link}
                         target="_blank"
-                        className="flex items-center gap-2 px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors dark:bg-darkHover"
+                        className="flex items-center gap-2 px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-purple-900 transition-colors dark:bg-darkHover"
                       >
                         <Github className="w-5 h-5" />
                         View Code
