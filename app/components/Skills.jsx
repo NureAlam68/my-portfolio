@@ -108,7 +108,7 @@ const Skills = () => {
                 {category.skills.map((skill, skillIndex) => (
                   <div
                     key={skill.name}
-                    className="flex items-center border gap-2 p-3 rounded-lg hover:bg-purple-500/10 transition-colors group"
+                    className="flex items-center border gap-2 p-3 rounded-lg hover:bg-purple-500/10 transition-colors group dark:border-gray-700"
                     style={{
                       animation: `slideUp 0.3s ease-out ${
                         index * 0.2 + skillIndex * 0.1
