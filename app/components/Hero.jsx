@@ -14,9 +14,9 @@ const Hero = () => {
         className="mt-10"
       >
         <Image
-          src={assets.profile_img}
+          src={assets.heroImg}
           alt=""
-          className="rounded-full w-[160px] h-[160px]"
+          className="rounded-full w-[180px] h-[180px] border-4 dark:border-white"
         />
       </motion.div>
       <motion.h3
