@@ -23,7 +23,7 @@ const Hero = () => {
         initial={{ y: -20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.3 }}
-        className="flex items-end gap-2 text-xl md:text-2xl mb-3 font-Ovo"
+        className="flex items-end gap-2 text-xl md:text-3xl mb-3 font-Ovo"
       >
         Hi! I'm Nure Alam{" "}
         <Image src={assets.hand_icon} alt="" className="w-6" />
@@ -34,7 +34,7 @@ const Hero = () => {
         transition={{ duration: 0.8, delay: 0.5 }}
         className="text-3xl sm:text-6xl lg:text-[66px] font-Ovo"
       >
-        Web developer based in Bangladesh.
+        MERN Stack Developer
       </motion.h1>
       <motion.p
         initial={{ opacity: 0 }}
@@ -42,9 +42,7 @@ const Hero = () => {
         transition={{ duration: 0.6, delay: 0.7 }}
         className="max-w-2xl mx-auto font-Ovo"
       >
-        Passionate about building clean, responsive web solutions with Tailwind
-        css, React.js, Next.js, Express.js, and MongoDB, blending analytical
-        chemistry skills with coding expertise.
+        MERN stack developer specializing in building fast, responsive, and scalable web applications using React.js, Next.js, Express.js, Node.js, and MongoDB with clean Tailwind CSS designs.
       </motion.p>
       <div className="flex flex-col sm:flex-row items-center gap-4 mt-4">
         <motion.a

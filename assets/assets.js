@@ -18,7 +18,7 @@ import react from './reactjs.png';
 import node from './nodejs.png';
 import mail_icon from './mail_icon.png';
 import mail_icon_dark from './mail_icon_dark.png';
-import profile_img from './profile_img.jpg';
+import profile_img from './hero.jpg';
 import download_icon from './download-icon.png';
 import hand_icon from './hand-icon.png';
 import header_bg_color from './header-bg-color.png';
@@ -38,7 +38,7 @@ import right_arrow from './right-arrow.png';
 import send_icon from './send-icon.png';
 import right_arrow_bold from './right-arrow-bold.png';
 import right_arrow_bold_dark from './right-arrow-bold-dark.png';
-import heroImg from "./nurealam.jpg"
+import heroImg from "./profile.jpg"
 
 export const assets = {
     user_image,
